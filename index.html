@@ -9,10 +9,9 @@ Select ONE Additional
 [ no ] Feature 1 - Use .addClass() method
 [ no ] Feature 2 - Use a variable in javaScript 
 [ no ] Feature 3 - Use .mouseover() method
-[ no ] Feature 4 - Use .show() method
+[ x ] Feature 4 - Use .show() method
 [ no ] Feature 5 - Use .append() method
 -->
-
 
 <!DOCTYPE html>
 <html>
@@ -25,37 +24,75 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+
+    <h1>
+      -`✮´- My Top 3 Memories of
+      <span class="memory-title">This Year -`✮´-</span>
+    </h1>
+
     <ol>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <p>
+          Going to my first Billie Eilish concert :3 It was so much fun, I've
+          wanted to see her live since 2018 and even got tickets before but
+          couldn't go due to the pandemic :(
+        </p>
+        <img
+          id="img1"
+          src="https://cdn.glitch.global/4137d665-f8a0-4699-b1d7-8fdc37ee2bbc/IMG_2778.JPG?v=1745430135335"
+          width="300"
+        />
       </li>
-
+      <a href="https://drive.google.com/drive/folders/1--xpSwnNrubnpYKLER_1FJpvv7UEJ8bp"> click here to see photos and vids!</a>
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <p>
+          The 2nd senior art show!! It was so fun setting up with all my friends
+          and getting to exhibit an entire collection of my own artwork.
+        </p>
+        <img
+          id="img2"
+          src="https://cdn.glitch.global/4137d665-f8a0-4699-b1d7-8fdc37ee2bbc/IMG_9716.JPG?v=1745430147542"
+          width="300"
+        />
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p>
+          Setting up for the ELM x LaG show!! You should come check it out - LaG
+          High School Senior Art Exhibition: Transcendence, Opening on May 3rd
+          at 191 N 14th St, Brooklyn, NY
+        </p>
+        <img
+          id="img3"
+          src="https://cdn.glitch.global/4137d665-f8a0-4699-b1d7-8fdc37ee2bbc/IMG_6481.JPG?v=1745430141190"
+          width="300"
+        />
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      // Click button → change text color + show image
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1").css("color", "cyan");
+        $("#img1").show();
       });
 
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "yellow");
+        $("#img2").show();
       });
 
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
+        $("#mem3").css("color", "magenta");
+        $("#img3").show();
       });
+
+      // Extra example of selecting by element
+      $("p").css("line-height", "1.5");
     </script>
   </body>
 </html>
